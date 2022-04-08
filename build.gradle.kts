@@ -26,16 +26,6 @@ import net.ltgt.gradle.nullaway.NullAwayExtension
 import nl.javadude.gradle.plugins.license.LicenseExtension
 import nl.javadude.gradle.plugins.license.LicensePlugin
 
-plugins {
-    id("io.github.gradle-nexus.publish-plugin")
-}
-
-nexusPublishing {
-    repositories {
-        sonatype()
-    }
-}
-
 allprojects {
     project.group = "com.stellarstation.curiostack"
 
@@ -60,17 +50,9 @@ allprojects {
     }
 
     plugins.withType(MavenPublishPlugin::class) {
-        plugins.apply("signing")
+        plugins.apply("com.google.cloud.artifactregistry.gradle-plugin")
 
         afterEvaluate {
-            configure<SigningExtension> {
-                useInMemoryPgpKeys(System.getenv("MAVEN_GPG_PRIVATE_KEY"), "")
-                val publications = the<PublishingExtension>().publications
-                if (publications.names.contains("maven")) {
-                    sign(publications["maven"])
-                }
-            }
-
             configure<PublishingExtension> {
                 publications.withType<MavenPublication> {
                     groupId = project.group as String
@@ -106,15 +88,10 @@ allprojects {
                         }
                     }
                 }
-            }
-        }
-    }
-
-    plugins.withId("com.gradle.plugin-publish") {
-        afterEvaluate {
-            tasks.configureEach {
-                if (name != "publishPlugins" && !name.contains("MavenLocal") && name.startsWith("publish")) {
-                    enabled = false
+                repositories {
+                    maven {
+                        setUrl("artifactregistry://asia-northeast1-maven.pkg.dev/infostellar-cluster/stellarstack")
+                    }
                 }
             }
         }

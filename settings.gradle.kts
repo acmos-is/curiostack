@@ -38,7 +38,6 @@ pluginManagement {
 
     plugins {
         id("com.gradle.plugin-publish") version "0.14.0"
-        id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
     }
 
     repositories {
@@ -51,6 +50,7 @@ pluginManagement {
 plugins {
     id("com.gradle.enterprise").version("3.6.3")
     id("org.curioswitch.gradle-curiostack-plugin").version("0.9.1")
+    id("com.google.cloud.artifactregistry.gradle-plugin").version("2.1.5")
 }
 
 configure<CuriostackExtension> {
