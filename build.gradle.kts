@@ -98,12 +98,6 @@ allprojects {
     }
 }
 
-gcloud {
-    clusterBaseName.set("curioswitch")
-    clusterName.set("curioswitch-cluster-jp")
-    cloudRegion.set("asia-northeast1")
-}
-
 ci {
     releaseTagPrefixes {
         register("RELEASE_SERVERS_") {
