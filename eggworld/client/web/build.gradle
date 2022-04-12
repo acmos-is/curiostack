@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-apply plugin: 'org.curioswitch.gradle-curio-web-plugin'
+apply plugin: 'com.stellarstation.curiostack.gradle-curio-web-plugin'
 
 archivesBaseName = 'eggworld-client-web'
 

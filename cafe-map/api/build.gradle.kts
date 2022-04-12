@@ -28,7 +28,7 @@ import org.curioswitch.gradle.tooldownloader.DownloadedToolManager
 import org.curioswitch.gradle.tooldownloader.util.DownloadToolUtil
 
 plugins {
-    id("org.curioswitch.gradle-grpc-api-plugin")
+    id("com.stellarstation.curiostack.gradle-grpc-api-plugin")
     java
 }
 

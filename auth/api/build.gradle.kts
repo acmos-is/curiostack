@@ -23,7 +23,7 @@
  */
 
 plugins {
-    id("org.curioswitch.gradle-grpc-api-plugin")
+    id("com.stellarstation.curiostack.gradle-grpc-api-plugin")
     java
 }
 

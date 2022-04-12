@@ -26,7 +26,7 @@ import com.diffplug.gradle.spotless.SpotlessExtension
 import org.curioswitch.gradle.plugins.nodejs.tasks.NodeTask
 
 plugins {
-    id("org.curioswitch.gradle-node-plugin")
+    id("com.stellarstation.curiostack.gradle-node-plugin")
 }
 
 tasks {

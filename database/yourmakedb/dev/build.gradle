@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-apply plugin: 'org.curioswitch.gradle-curio-database-plugin'
+apply plugin: 'com.stellarstation.curiostack.gradle-curio-database-plugin'
 
 database {
     dbName = 'yourmakedb'

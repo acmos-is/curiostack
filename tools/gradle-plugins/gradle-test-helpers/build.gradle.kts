@@ -27,7 +27,7 @@ plugins {
 }
 
 dependencies {
-    api("org.curioswitch.curiostack:curio-testing-framework")
+    api("com.stellarstation.curiostack:curio-testing-framework")
 
     api(gradleTestKit())
 

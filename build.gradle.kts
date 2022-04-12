@@ -35,6 +35,12 @@ allprojects {
         configure<NullAwayExtension> {
             annotatedPackages.add("org.curioswitch")
         }
+
+        repositories {
+            maven {
+                setUrl("gcs://infostellar-cluster-maven/maven")
+            }
+        }
     }
 
     plugins.withType(JacocoPlugin::class) {

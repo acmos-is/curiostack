@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-apply plugin: 'org.curioswitch.gradle-grpc-api-plugin'
+apply plugin: 'com.stellarstation.curiostack.gradle-grpc-api-plugin'
 
 archivesBaseName = 'curioswitch-eggworld-api'
 

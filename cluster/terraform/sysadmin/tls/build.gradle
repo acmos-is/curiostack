@@ -22,4 +22,4 @@
  * SOFTWARE.
  */
 
-apply plugin: 'org.curioswitch.gradle-terraform-plugin'
+apply plugin: 'com.stellarstation.curiostack.gradle-terraform-plugin'

@@ -23,5 +23,5 @@
  */
 
 plugins {
-    id("org.curioswitch.gradle-pulumi-plugin")
+    id("com.stellarstation.curiostack.gradle-pulumi-plugin")
 }

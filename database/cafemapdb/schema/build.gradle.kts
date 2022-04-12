@@ -25,7 +25,7 @@
 import org.curioswitch.gradle.plugins.gcloud.keys.KmsKeyDecrypter
 
 plugins {
-    id("org.curioswitch.gradle-curio-database-plugin")
+    id("com.stellarstation.curiostack.gradle-curio-database-plugin")
 }
 
 val keys: KmsKeyDecrypter by rootProject.extra
